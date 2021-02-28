@@ -43,8 +43,45 @@ def calculate_sum_OT(data):
     return res
 
 
+def calculate_all_average_OT(column_name):
+    """
+    :param column_name: Name of the column
+    :return: type dictionary, key is every key in the column and value is the average OT time in list by year
+    """
+    # Use 2015 data as key
+    original_data = read_special_events_data("../data/Special Events 2015 - present - 2015.csv")
+    keys = pd.unique(original_data[column_name])
+    res = {}
+
+    for k in keys:
+        data = extract_data(column_name, k)
+        res[k] = calculate_average_OT(data)
+
+    return res
+
+
+def calculate_all_sum_OT(column_name):
+    """
+    :param column_name: Name of the column
+    :return: type dictionary, key is every key in the column and value is the sum OT time in list by year
+    """
+    # Use 2015 data as key
+    original_data = read_special_events_data("../data/Special Events 2015 - present - 2015.csv")
+    keys = pd.unique(original_data[column_name])
+    res = {}
+
+    for k in keys:
+        data = extract_data(column_name, k)
+        res[k] = calculate_sum_OT(data)
+
+    return res
+
 if __name__ == '__main__':
-    data = extract_data("OTCODE", 462)
-    print(calculate_sum_OT(data))
+    # Example of getting one key value
+    data = extract_data("NAME", "O'Connor,Paul B")
+    #print(calculate_sum_OT(data))
+
+    # Example of getting all the key values for an attribute
+    print(calculate_all_sum_OT("OTCODE"))
 
 
