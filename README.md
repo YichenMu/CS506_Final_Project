@@ -3,7 +3,7 @@
 Final project for CS506.
 
 ## About
-### 1. Project Discription
+### 1. Project Description
 The clients would like to build on the previous semester’s work regarding police court overtime and budget analysis and focus on special events pay abuse. 
 This project starts with the upcoming FY22 police union contract up for renegotiation in March, the clients would like to use the results obtained from 
 this project to make informed decisions on: (1) identifying instances of financial excess in BPD spending, (2) characterizing wasteful BPD overtime practices,
@@ -20,6 +20,8 @@ See [Police Budget & OT Data (Spring 2021)](https://docs.google.com/document/d/1
 * [Previous semester’s GitHub repo (Fall 2020)](https://github.com/BU-Spark/CS506-Fall2020-Projects/tree/master/police_conduct_data)
 * [Report with previous semester’s data](https://data.aclum.org/wp-content/uploads/2020/11/BPD-Court-Overtime-Report-ACLUM-Progressive-Mass-BU.pdf)
 * [Portfolio with previous semester’s Tableau visualizations (Fall 2020)](https://data.aclum.org/bpd-court-overtime-analysis/)
+### 4. Limitations
+1. There are no obvious discrepancies between the WRKDHRS, the real hours worked by officers at a special event, and the OTHOURS, the number of hours logged by officers at special events. This discrepancies existed in the Court Overtime data from last semester. Hence, for our analysis we will have to look more specifically at the trends for events, officers, pay, from the Special Events Overtime data to uncover abuse of the overtime system.
 
 
 ## Deliverables
