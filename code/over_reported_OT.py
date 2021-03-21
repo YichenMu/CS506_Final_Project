@@ -1,3 +1,8 @@
+"""
+Author: Joey Cheng
+Date: 02-26-2021
+"""
+
 # Calculate the difference between reported OT and real work time in minute format
 
 import pandas as pd
