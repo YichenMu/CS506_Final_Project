@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\code\data_processing.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\code\event_count.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\code\test.py">
           <value>
             <Attribute>
