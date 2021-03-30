@@ -23,7 +23,10 @@ for i in range(len(value_list)):
 print(len(value_list),value_list)
 plt.figure(figsize=(80,80))
 plt.ylim((-1, 59))
-plt.barh(code_list,value_list,label='description')
+bars=plt.barh(code_list,value_list,label='description')
+for bar, label in zip(bars, code_list):
+    width = bar.get_width()
+    plt.annotate(width, xy=(width, bar.get_y() + 0.4), ha='left', va='center',size=30)
 # print(new_code_list,new_value_list)
 # visualize the data without sorting the OT
 # plt.bar(range(len(value_list)),value_list,width=0.9,label='OT',tick_label=code_list)

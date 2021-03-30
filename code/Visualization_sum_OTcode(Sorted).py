@@ -28,7 +28,10 @@ for i in range(len(new_value_list)):
     new_code_list.append(code_list[value_list.index(new_value_list[i])])
 plt.figure(figsize=(80,80))
 plt.ylim((-1, 59))
-plt.barh(new_code_list,new_value_list,label='description')
+bars=plt.barh(new_code_list,new_value_list,label='description')
+for bar, label in zip(bars, new_code_list):
+    width = bar.get_width()
+    plt.annotate(width, xy=(width, bar.get_y() + 0.4), ha='left', va='center',size=30)
 # print(new_code_list,new_value_list)
 # visualize the data without sorting the OT
 # plt.bar(range(len(value_list)),value_list,width=0.9,label='OT',tick_label=code_list)
