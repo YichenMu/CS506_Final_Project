@@ -13,11 +13,11 @@ def extract_data(column_name, code):
     :return: a length 6 list, each element is a dataframe containing that year's data
     """
     filePaths = ["../data/Special-Events-2015.csv",
-                 "../data/Special Events 2015 - present - 2016.csv",
-                 "../data/Special Events 2015 - present - 2017.csv",
-                 "../data/Special Events 2015 - present - 2018.csv",
-                 "../data/Special Events 2015 - present - 2019.csv",
-                 "../data/Special Events 2015 - present - 2020.csv"]
+                 "../data/Special-Events-2016.csv",
+                 "../data/Special-Events-2017.csv",
+                 "../data/Special-Events-2018.csv",
+                 "../data/Special-Events-2019.csv",
+                 "../data/Special-Events-2020.csv"]
 
     output_data = []
 
@@ -86,6 +86,6 @@ if __name__ == '__main__':
     #print(calculate_sum_OT(data))
 
     # Example of getting all the key values for an attribute
-    print(calculate_all_sum_OT("OTCODE"))
+    print(calculate_all_sum_OT("DESCRIPTION"))
 
 

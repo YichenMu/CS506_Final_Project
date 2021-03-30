@@ -44,11 +44,11 @@ def calculate_over_reported(filePath):
 
 if __name__ == '__main__':
     diff_2015 = calculate_over_reported("../data/Special-Events-2015.csv")
-    diff_2016 = calculate_over_reported("../data/Special Events 2015 - present - 2016.csv")
-    diff_2017 = calculate_over_reported("../data/Special Events 2015 - present - 2017.csv")
-    diff_2018 = calculate_over_reported("../data/Special Events 2015 - present - 2018.csv")
-    diff_2019 = calculate_over_reported("../data/Special Events 2015 - present - 2019.csv")
-    diff_2020 = calculate_over_reported("../data/Special Events 2015 - present - 2020.csv")
+    diff_2016 = calculate_over_reported("../data/Special-Events-2016.csv")
+    diff_2017 = calculate_over_reported("../data/Special-Events-2017.csv")
+    diff_2018 = calculate_over_reported("../data/Special-Events-2018.csv")
+    diff_2019 = calculate_over_reported("../data/Special-Events-2019.csv")
+    diff_2020 = calculate_over_reported("../data/Special-Events-2020.csv")
     print(diff_2015, diff_2016, diff_2017, diff_2018, diff_2019, diff_2020)
 
 
