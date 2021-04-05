@@ -32,17 +32,17 @@ def find_top_officers(n):
         print(df_20xx.head(n))
         print('\n~~ END 20'+str(i)+' ~~')
 
-        plt.figure(figsize=(22, 80), dpi=80)
+        plt.figure(figsize=(22, 50), dpi=75)
         plt.ylim((-1, 101))
-        bars = plt.barh(df_20xx.index.to_list(), df_20xx.OTHOURS, height=0.8, color=["sienna", "olive", "brown", "peru"])
+        bars = plt.barh(df_20xx.index.to_list(), df_20xx.OTHOURS, height=0.5, color=["sienna", "olive", "brown", "peru"])
         for bar, label in zip(bars, df_20xx.OTHOURS):
             width = bar.get_width()
-            plt.annotate(width, xy=(width, bar.get_y() + 0.4), ha='left', va='center')
+            plt.annotate(width, xy=(width, bar.get_y() + 0.25), ha='left', va='center')
         #df_20xx.plot(kind='barh')
         plt.title("BPD Special Event Overtime Hours: 20"+str(i),
-                  fontdict={'fontsize': 36, 'fontweight': "bold"})
-        plt.ylabel("Officer Name", fontdict={'fontsize': 36, 'fontweight': "bold"})
-        plt.xlabel("Overtime Hours", fontdict={'fontsize': 36, 'fontweight': "bold"})
+                  fontdict={'fontsize': 28, 'fontweight': "bold"})
+        plt.ylabel("Officer Name", fontdict={'fontsize': 28, 'fontweight': "bold"})
+        plt.xlabel("Overtime Hours", fontdict={'fontsize': 28, 'fontweight': "bold"})
         plt.tight_layout()
         plt.savefig("../img/top 100 OT officers - 20" + str(i) + ".png")
 
@@ -66,17 +66,17 @@ def find_top_officers(n):
     # plt.xlabel("Overtime Hours")
     # plt.tight_layout()
     # plt.show()
-    plt.figure(figsize=(22, 80), dpi=80)
+    plt.figure(figsize=(22, 50), dpi=75)
     plt.ylim((-1, 101))
-    bars = plt.barh(df_total.index.to_list(), df_total.OTHOURS, height=0.8, color=["sienna", "olive", "brown", "peru"])
+    bars = plt.barh(df_total.index.to_list(), df_total.OTHOURS, height=0.5, color=["sienna", "olive", "brown", "peru"])
     for bar, label in zip(bars, df_total.OTHOURS):
         width = bar.get_width()
-        plt.annotate(width, xy=(width, bar.get_y() + 0.4), ha='left', va='center')
+        plt.annotate(width, xy=(width, bar.get_y() + 0.25), ha='left', va='center')
     # df_20xx.plot(kind='barh')
     plt.title("BPD Special Event Overtime Hours: Total 2015-2020",
-              fontdict={'fontsize': 36, 'fontweight': "bold"})
-    plt.ylabel("Officer Name", fontdict={'fontsize': 36, 'fontweight': "bold"})
-    plt.xlabel("Overtime Hours", fontdict={'fontsize': 36, 'fontweight': "bold"})
+              fontdict={'fontsize': 28, 'fontweight': "bold"})
+    plt.ylabel("Officer Name", fontdict={'fontsize': 28, 'fontweight': "bold"})
+    plt.xlabel("Overtime Hours", fontdict={'fontsize': 28, 'fontweight': "bold"})
     plt.tight_layout()
     plt.savefig("../img/top 100 OT officers - 2015-2020.png")
 
