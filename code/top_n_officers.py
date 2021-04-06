@@ -35,7 +35,7 @@ def find_top_officers(n):
 
         plt.figure(figsize=(12, 30))
         plt.ylim((-1, 101))
-        plt.xlim((0, 1000))
+        plt.xlim((0, max(df_20xx.OTHOURS) + 200))
         bars = plt.barh(df_20xx.index.to_list(), df_20xx.OTHOURS, height=0.6, color=["sienna", "olive", "brown", "peru"])
         for bar, label in zip(bars, df_20xx.OTHOURS):
             width = bar.get_width()
