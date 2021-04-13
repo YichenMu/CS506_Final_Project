@@ -14,5 +14,12 @@ def extract_police_earning():
         police_data.to_csv("../data/Police-Earnings-Report-20" + str(y) + ".csv", index=False)
 
 
+def extract_special_events_2020():
+    data = pd.read_csv("../data/Special-Events-2020.csv")
+    special_events_data = data.loc[data["CHARGED"] == "SPECIAL EVENTS"]
+    print(special_events_data.head())
+    special_events_data.to_csv("../data/Special-Events-2020-updated.csv")
+
+
 if __name__ == '__main__':
-    extract_police_earning()
+    extract_special_events_2020()
